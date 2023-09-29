@@ -37,18 +37,18 @@ compose.desktop {
             copyright = "2023 Yaowei Zou. MIT License."
 
             windows {
-//                iconFile.set(project.file("src/main/resources/icons/icon.ico"))
+                iconFile.set(project.file("src/main/resources/icons/icon.ico"))
                 shortcut = true
                 dirChooser = true
             }
 
             macOS {
                 dockName = "Jasypt Desktop"
-//                iconFile.set(project.file("src/main/resources/icons/icon.icns"))
+                iconFile.set(project.file("src/main/resources/icons/icon.icns"))
             }
 
             linux {
-//                iconFile.set(project.file("src/main/resources/icons/icon.png"))
+                iconFile.set(project.file("src/main/resources/icons/icon.png"))
             }
         }
     }
