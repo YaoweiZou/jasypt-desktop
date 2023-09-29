@@ -28,7 +28,7 @@ import org.jasypt.exceptions.EncryptionOperationNotPossibleException
 @Composable
 @Preview
 fun App() {
-    val appVersion = "1.0.3"
+    val appVersion = "1.0.4"
     val primaryColor = Color(0xFF3DDC84)
 
     var input by remember { mutableStateOf("") }
@@ -73,7 +73,7 @@ fun App() {
                     }
                     return@onPreviewKeyEvent false
                 }.focusRequester(focusRequesterInput),
-                label = { Text("Content") },
+                label = { Text("Enter plain text to Encrypt or Decrypt") },
                 value = input,
                 onValueChange = {
                     if (!it.contains(" ") && !it.contains("\t")) {
@@ -97,7 +97,7 @@ fun App() {
                     errorLeadingIconColor = Color.Red
                 ),
                 modifier = Modifier.fillMaxWidth(0.8F).focusRequester(focusRequesterPassword),
-                label = { Text("Password") },
+                label = { Text("Secret Key") },
                 value = password,
                 onValueChange = {
                     if (!it.contains(" ") && !it.contains("\t")) {

@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.yaoweizou"
-version = "1.0.3"
+version = "1.0.4"
 
 repositories {
     mavenCentral()
@@ -32,7 +32,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Rpm)
             packageName = "Jasypt Desktop"
-            packageVersion = "1.0.3"
+            packageVersion = "1.0.4"
             description = "Jasypt encryption/decryption tools."
             copyright = "2023 Yaowei Zou. MIT License."
 
