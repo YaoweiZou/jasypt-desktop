@@ -12,7 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.input.key.*
+import androidx.compose.ui.res.loadImageBitmap
+import androidx.compose.ui.res.useResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
@@ -105,6 +108,14 @@ fun App() {
             )
 
             Spacer(modifier = Modifier.height(16.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+            ) {
+                Text(text = "PBEWithMD5AndDES", color = Color(0xFFCCCCCC))
+                Spacer(modifier = Modifier.width(10.dp))
+            }
 
             Row(
                 modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center
@@ -216,7 +227,7 @@ fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
         title = "Jasypt Desktop",
-//        icon = BitmapPainter(useResource("icons/icon.png", ::loadImageBitmap))
+        icon = BitmapPainter(useResource("icons/icon.png", ::loadImageBitmap))
     ) {
         App()
     }
